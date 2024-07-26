@@ -15,10 +15,10 @@ import Swal from 'sweetalert2';
 export class AddCustomerComponent {
   constructor(private http:HttpClient){}
   public customerobj ={
-    "id":"",
-    "name":"",
-    "city":"",
-    "contact":""
+    id:"",
+    name:"",
+    city:"",
+    contact:""
 }
   addCustomer(){
     this.http.post("http://localhost:8080/customer-controller/customer",this.customerobj).subscribe(

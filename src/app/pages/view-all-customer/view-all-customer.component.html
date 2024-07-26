@@ -1,0 +1,23 @@
+<div class="row">
+    <h1 class="text-center mb-4 bg-dark p-4 text-white fw-bolde">View All Customer</h1>
+</div>
+<div>
+    <table class="table">
+        <tr>
+            <th>Customer ID</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>City</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let customer of customerList">
+            <td>{{customer.id}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.contact}}</td>
+            <td>{{customer.city}}</td>
+            <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
+            <td><button class="btn"><i class="bi bi-pencil-square"></i></button></td>
+        </tr>
+    </table>
+</div>
