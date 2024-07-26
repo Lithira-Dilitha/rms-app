@@ -1,0 +1,17 @@
+    <div class="row">
+        <h1 class="text-center mb-4 bg-dark p-4 text-white fw-bolde">Add Customer</h1>
+    </div>
+    <div class="row">
+        <div>
+            <input class="form-control" type="text" placeholder="Name" [(ngModel)]="customerobj.name" aria-label="default input example">
+        </div>
+        <div class="mt-2">
+            <input class="form-control" type="text" placeholder="City" [(ngModel)]="customerobj.city" aria-label="default input example">
+        </div>
+        <div class="mt-2">
+            <input class="form-control" type="text" placeholder="Contact" [(ngModel)]="customerobj.contact" aria-label="default input example">
+        </div>
+        <div class="mt-2">
+            <button class="btn btn-success" (click)="addCustomer()">Add Customer</button>
+        </div>
+    </div>
