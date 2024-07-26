@@ -74,9 +74,9 @@ export class ViewAllCustomerComponent {
     }
    }
    saveUpdateCustomer(){
-      // this.http.put("http://localhost:8080/customer-controller/customer",{this.customerobj}).subscribe(
+      this.http.put("http://localhost:8080/customer-controller/customer",this.customerobj).subscribe(
 
-      // )
+      )
    }
   loadCustomerTable(){
     this.http.get("http://localhost:8080/customer-controller/customers").subscribe(

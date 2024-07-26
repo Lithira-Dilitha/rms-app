@@ -1,14 +1,17 @@
 <ul class="nav">
     <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="#">Active</a>
+      <button class="nav-link active" aria-current="page" >Active</button>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+        <button class="nav-link" [routerLink]="['/add-customer']" routerLinkActive="router-link-active" >Add Customer</button>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <button class="nav-link" [routerLink]="['/viev-all-customers']" >View Customers</button>
     </li>
     <li class="nav-item">
-      <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+      <button class="nav-link" [routerLink]="['/add-item']" >Add Item</button>
+    </li>
+    <li class="nav-item">
+      <button class="nav-link disabled" aria-disabled="true">Disabled</button>
     </li>
   </ul>
