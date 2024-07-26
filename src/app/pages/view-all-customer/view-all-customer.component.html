@@ -1,4 +1,7 @@
 <div class="row">
+    <app-nav-bar></app-nav-bar>
+</div>
+<div class="row mt-2">
     <h1 class="text-center mb-4 bg-dark p-4 text-white fw-bolde">View All Customer</h1>
 </div>
 <div>
@@ -16,8 +19,36 @@
             <td>{{customer.name}}</td>
             <td>{{customer.contact}}</td>
             <td>{{customer.city}}</td>
-            <td><button class="btn btn-danger"><i class="bi bi-trash"></i></button></td>
-            <td><button class="btn"><i class="bi bi-pencil-square"></i></button></td>
+            <td><button class="btn btn-danger" (click)="deleteCustomer(customer)"><i class="bi bi-trash"></i></button></td>
+            <td><button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="updateCustomer(customer)"><i class="bi bi-pencil-square"></i></button></td>
         </tr>
     </table>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mt-2">
+                    <input class="form-control" type="text" placeholder="Id" [(ngModel)]="customerobj.id" aria-label="default input example" disabled>
+                </div>
+                <div class="mt-2">
+                    <input class="form-control" type="text" placeholder="Name" [(ngModel)]="customerobj.name" aria-label="default input example">
+                </div>
+                <div class="mt-2">
+                    <input class="form-control" type="text" placeholder="City" [(ngModel)]="customerobj.city" aria-label="default input example">
+                </div>
+                <div class="mt-2">
+                    <input class="form-control" type="text" placeholder="Contact" [(ngModel)]="customerobj.contact" aria-label="default input example">
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="saveUpdateCustomer()">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </div>
